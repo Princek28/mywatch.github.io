@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <style>
+     * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    section {
+      padding: 60px 0px;
+    }
+
+    section .section-title {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+
+    .backside .card {
+      /* padding: 0px 70px; */
+      /* margin: auto; */
+      height: 293px;
+    }
+
+    /* .card {
+    border: none;
+    background: #ffffff;
+    } */
+
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      border-radius: .25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+
+    .mainflip {
+      -webkit-transition: 1s;
+      -webkit-transform-style: preserve-3d;
+      -ms-transition: 1s;
+      -moz-transition: 1s;
+      -moz-transform: perspective(1000px);
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transition: 1s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .frontside {
+      position: relative;
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      z-index: 2;
+      margin-bottom: 50px;
+    }
+
+    .backside {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: white;
+      -webkit-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      -o-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: 1s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transition: 1s;
+      -moz-transform-style: preserve-3d;
+      -o-transition: 1s;
+      -o-transform-style: preserve-3d;
+      -ms-transition: 1s;
+      -ms-transform-style: preserve-3d;
+      transition: 1s;
+      transform-style: preserve-3d;
+    }
+
+    .frontside .card .card-title,
+    .backside .card .card-title {
+      color: #ff0000 !important;
+    }
+
+    .frontside .card .card-body img {
+      width: auto;
+      height: 250px;
+      border-radius: 50%;
+    }
+  </style>
+  <title>Hublot Watche's</title>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a href="" class="navbar-brand">
+            <img src="images/logo_watches.jpeg " alt="Logo" class="rounded-pill" style="height: 60px;">
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#logo">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="logo">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Service</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle"  id="dropdownMenu2" data-bs-toggle="dropdown"   style="text-decoration: none;">
+                          Watche's
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <li><a href="rado.html" class="dropdown-item" type="button">Rado</a></li>
+                          <li><a href="rolex.html" class="dropdown-item" type="button">Rolex</a></li>
+                          <li><a href="omega.html" class="dropdown-item" type="button">Omega</a></li>
+                          <li><a href="hublot.html" class="dropdown-item" type="button">Hublot</a></li>
+                        </ul>
+                      </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact US</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Login</a>
+                </li>
+
+
+            </ul>
+            <form class="d-flex" action="#">
+                <input type="text" class="form-control me-2" placeholder="Search">
+                <button class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-3">
+
+                <form class="text-center border border-light p-5" action="#!">
+
+                    <p class="h4 mb-4">Login In</p>
+
+                    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                        placeholder="Password">
+
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                    me</label>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-info btn-block my-4" type="submit">Submit</button>
+
+                    <p>Not a member?
+                        <a href="#" data-bs-target="#mymodall" data-bs-toggle="modal">Register</a>
+                    </p>
+
+                    <p>or sign in with:</p>
+
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mymodall">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-close text-end" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-3">
+                <form class="text-center border border-light p-5" action="#!">
+
+                    <p class="h4 mb-4">Sign up</p>
+
+                    <div class="col">
+                        <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                            placeholder="First name">
+                    </div>
+                    <br>
+                    <div class="col">
+                        <input type="text" id="defaultRegisterFormLastName" class="form-control"
+                            placeholder="Last name">
+                    </div>
+                    <br>
+                    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
+                        placeholder="E-mail">
+                    <input type="password" id="defaultRegisterFormPassword" class="form-control"
+                        placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+                    <p>sign up with:</p>
+
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- navbar end  -->
+
+
+  <div class="container" style="margin-top: 150px">
+    <div class="row justify-content-center text-center">
+      <div class="h1 text-danger"><u>HUBOLT</u></div>
+      <div class="col-md-8 mt-5">
+        <p>Hublot watches are the epitome of contemporary luxury and innovation in the world of horology. Founded in
+          1980 by Carlo Crocco, Hublot has revolutionized watchmaking with its unique fusion of materials, avant-garde
+          design, and exceptional craftsmanship.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 p-5 mt-5">
+        <p class="h4 text-danger">Distinctive Design:</p>
+        <p>Hublot watches are instantly recognizable for their bold and distinctive design. The brand often incorporates
+          unconventional materials such as ceramic, titanium, carbon fiber, and rubber into their timepieces, creating a
+          striking visual impact. Their watches feature large, robust cases and innovative dial designs, making them a
+          favorite choice for individuals who appreciate avant-garde aesthetics.</p>
+
+        <p class="h4 text-danger">Iconic Collections:</p>
+        <p>Hublot offers a diverse range of collections, each with its own distinct character. The Big Bang collection,
+          one of their most iconic lines, embodies the brand's bold spirit with its oversized cases, intricate dials,
+          and fusion of materials. The Classic Fusion collection, on the other hand, offers a more refined and
+          understated aesthetic, appealing to those with a taste for elegance and simplicity.</p>
+      </div>
+
+      <div class="col-md-6 p-5 mt-5">
+        <p class="h4 text-danger">Innovative Fusion:</p>
+        <p>Hublot is renowned for its "Art of Fusion" philosophy, seamlessly blending traditional watchmaking techniques
+          with cutting-edge materials. This fusion approach results in watches that are not only visually stunning but
+          also incredibly durable and comfortable to wear. Hublot's mastery of fusion extends beyond materials,
+          integrating different styles and inspirations to create truly unique timepieces.</p>
+        <p class="h4 text-danger">Exceptional Craftsmanship:</p>
+        <p>Hublot watches are crafted with meticulous attention to detail and precision. The brand's skilled artisans
+          and watchmakers ensure that each component is of the highest quality, resulting in timepieces that are not
+          only aesthetically pleasing but also reliable and accurate. Hublot's commitment to craftsmanship is evident in
+          their in-house movements, showcasing their expertise in mechanical watchmaking.</p>
+      </div>
+    </div>
+    <div class="row text-center justify-content-center mt-5">
+      <div class="col-md-8 ">
+        <p>In summary, Hublot watches represent the perfect marriage of innovation, artistry, and craftsmanship. They
+          cater to individuals who appreciate bold and distinctive designs while valuing the heritage of traditional
+          watchmaking. Hublot's constant pursuit of excellence and creativity continues to captivate watch enthusiasts
+          and collectors worldwide.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="" class="pb-5">
+    <div class="container" style="margin-top:100px">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="h1 text-danger"><u>Men's Watch</u></div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Classic_Funsion.png" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">CLASSIC FUNCTION</h3>
+                    <h5 class="card-body">ORIGINAL TITANIUM 42MM,</h5>
+                    <p>Hublot brings back the watch that shook up conventions in 1980.</p>
+                    <p>&#8377; 780,000</p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 ">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/MP.png" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">MP</h3>
+                    <h5 class="card-body">MP-13 TOURBILLON BI-AXIS</h5>
+                    <p>The Art of Fusion is expressed right through to the heart of the movement.</p>
+                    <p>
+                    <p>&#8377; 15,000,000</p>
+                    </p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 ">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Novelties.png" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">NOVELTIES</h3>
+                    <h5 class="card-body">TOURBILLON BI-AXIS</h5>
+                    <p>The Art of Fusion is expressed right through to the heart of the movement.</p>
+                    <p>
+                    <p>&#8377; 150,000</p>
+                    </p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 ">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Big_Bang.png" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">BIG BANG</h3>
+                    <h5 class="card-body">UNICO KING GOLD CERAMIC 44MM</h5>
+                    <p>From the first use of rubber in watchmaking, to creating new precious alloys, such as
+                      scratch-proof Magic Gold.</p>
+                    <p>&#8377; 3,790,000</p>
+                    </p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 ">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Shaped.png" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">SQUARE BANG</h3>
+                    <h5 class="card-body">UNICO TITANIUM 42MM,</h5>
+                    <p>A disruptive and unconventional shape.Titanium is extensively used by Hublot, specifically for
+                      its lightness.</p>
+                    <p>
+                    <p>&#8377; 2,190,000</p>
+                    </p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WOMEAN,S WATCH -->
+  <section id="" class="pb-5">
+    <div class="container mt-5">
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="h1 text-danger"><u>Woman's Watch</u></div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/woman_1.jpg" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">Big Bang</h3>
+                    <h5 class="card-body">Pink Gold With Diamonds,</h5>
+                    <p>The Hublot Big Bang Gold White Diamonds 361.PE.2010.RW.1104 has a quartz movement.</p>
+                    <p>&#8377; 22,90,000</p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Woman_2.jpg" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">Big Bang</h3>
+                    <h5 class="card-body">Hours, Minutes And Seconds</h5>
+                    <p>The Hublot Big Bang Gold Diamonds 361.PX.1280.RX.1104 has a quartz movement.</p>
+                    <p>&#8377; 22,90,000</p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Woman_3.jpg" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">Big Bang</h3>
+                    <h5 class="card-body">Stainless Steel With Diamonds</h5>
+                    <p>Hublot exclusively uses a medical grade, non-oxidizing 316L type steel.</p>
+                    <p>&#8377; 11,70,000</p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/Woman_4.jpg" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">Big Bang</h3>
+                    <h5 class="card-body">Stainless Steel With Diamonds</h5>
+                    <p>This stable and durable alloy perfectly withstands all the hazards of daily life.On an aesthetic
+                      level, it is easily "decorated".</p>
+                    <p>&#8377; 10,30,000</p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="images/Hublot/woman_5.jpg" alt="card image"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h3 class="card-title">Big Bang</h3>
+                    <h5 class="card-body">Big Bang Gold Blue Diamonds</h5>
+                    <p>Looking towards the future, Hublot takes a new look at watchmaking by merging the innovation and
+                      tradition, the high-tech and expert craftsmanship and the machine.</p>
+                    <p>&#8377; 24,50,000</p>
+                    <div class="btn btn-dark">BUY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <hr>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <h1 class="text-center text-danger"><u>OUR BOUTIQUES</u></h1>
+      </div>
+      <div class="col-md-8">
+        <p class="text-center mt-5">
+          We have boutiques all over the world, in the most exclusive
+          locations. Discover our global network.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4  mt-5">
+          <div class="card border rounded-3">
+            <div class="card-hearder">
+              <img class="card-img-top img-fluid" src="images/Hublot/Geneva.jpg" alt="" style="width: 450px" />
+            </div>
+            <div class="card-body text-center">
+              <p class="h4">Geneva</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  mt-5">
+          <div class="card border rounded-3">
+            <div class="card-hearder">
+              <img class="card-img-top img-fluid" src="images/Hublot/New Yourk.jpg" alt="" style="width: 450px" />
+            </div>
+            <div class="card-body text-center">
+              <p class="h4">NEW YOURK</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  mt-5">
+          <div class="card border rounded-3">
+            <div class="card-hearder">
+              <img class="card-img-top img-fluid" src="images/Hublot/London New Bond Street.jpg" alt=""
+                style="width: 450px" />
+            </div>
+            <div class="card-body text-center">
+              <p class="h4">LONDON NEW BOND STREET</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5">
+          <div class="card border rounded-3">
+            <div class="card-hearder">
+              <img class="card-img-top img-fluid" src="images/Hublot/Ginza.jpg" alt="" style="width: 450px" />
+            </div>
+            <div class="card-body text-center">
+              <p class="h4">GINZA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  mt-5">
+          <div class="card border rounded-3">
+            <div class="card-hearder">
+              <img class="card-img-top img-fluid" src="images/Hublot/Hong Kong Heritage.jpg" alt=""
+                style="width: 450px" />
+            </div>
+            <div class="card-body text-center">
+              <p class="h4">HONG KONG HERITAGE</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  mt-5">
+          <div class="card border rounded-3">
+            <div class="card-hearder">
+              <img class="card-img-top img-fluid" src="images/Hublot/Dubai Mall.jpg" alt="" style="width: 450px" />
+            </div>
+            <div class="card-body text-center">
+              <p class="h4">DUBAI MALL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer start -->
+
+  <div class="container-fluid mt-5 p-5 bg-dark text-white-50">
+    <div class="row justify-content-center">
+        <div class="col-md-2 mt-5">
+            <div class="h5 text-white"><u>Menu</u></div>
+            <p><a class="nav-link" href="Aboutus.html">About Us</a></p>
+            <p><a class="nav-link" href="service.html">Service</a></p>
+            <p><a class="nav-link" href="rado.html">Rado Watch</a></p>
+            <p><a class="nav-link" href="rolex.html">Rolex Watch</a></p>
+            <p><a class="nav-link" href="omega.html">Omega Watch</a></p>
+            <p><a class="nav-link" href="hublot.html">Hublot Watch</a></p>
+            <p><a class="nav-link" href="contactus.html">Contact Us</a></p>
+        </div>
+
+        <div class="col-md-2 mt-5">
+            <div class="h5 text-white"><u>Policy</u></div>
+            <p><a class="nav-link" href="Privatepolicy.html" target="_blank">Privat Policy</a></p>
+            <p><a class="nav-link" href="Terms_Condition.html" target="_blank">Terms & Condiation</a></p>
+        </div>
+        <div class="col-md-3 mt-5">
+            <div class="h5 text-white"><u>OPENING HOURS</u></div>
+            <p>Monday......9:00-22:00</p>
+            <p>Tuesday.......9:00:-22:00</p>
+            <P>Wednesday.......9:00:-22:00</P>
+            <p>Thursday......9:00:-22:00</p>
+            <p>Friday.......9:00:-22:00</p>
+            <p>Saturday......9:00:-18:00</p>
+            <p>Sunday........Holiday</p>
+        </div>
+        <div class="col-md-3 mt-5">
+            <div class="h5 text-white"><u>Location</u></div>
+            <p>Location: </p>
+            <p>New York, 94126, United States</p>
+            
+        </div>
+        <div class="col-md-2 mt-5">
+            <div class="h5 text-white"><u>CONTACT</u></div>
+            <p>Phone: 054/9923</p>
+            <p>Email: ax705363@gmail.com</p>
+            <p>On Social Media:</p>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

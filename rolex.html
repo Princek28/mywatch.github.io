@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+    <title>Rolex Watche's</title>
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">
+                <img src="images/logo_watches.jpeg " alt="Logo" class="rounded-pill" style="height: 60px;">
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#logo">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="logo">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" id="dropdownMenu2" data-bs-toggle="dropdown"
+                                style="text-decoration: none;">
+                                Watche's
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="rado.html" class="dropdown-item" type="button">Rado</a></li>
+                                <li><a href="rolex.html" class="dropdown-item" type="button">Rolex</a></li>
+                                <li><a href="omega.html" class="dropdown-item" type="button">Omega</a></li>
+                                <li><a href="hublot.html" class="dropdown-item" type="button">Hublot</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Login</a>
+                    </li>
+
+
+                </ul>
+                <form class="d-flex" action="#">
+                    <input type="text" class="form-control me-2" placeholder="Search">
+                    <button class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-3">
+
+                    <form class="text-center border border-light p-5" action="#!">
+
+                        <p class="h4 mb-4">Login In</p>
+
+                        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                            placeholder="Password">
+
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                        me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-info btn-block my-4" type="submit">Submit</button>
+
+                        <p>Not a member?
+                            <a href="#" data-bs-target="#mymodall" data-bs-toggle="modal">Register</a>
+                        </p>
+
+                        <p>or sign in with:</p>
+
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mymodall">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close text-end" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <form class="text-center border border-light p-5" action="#!">
+
+                        <p class="h4 mb-4">Sign up</p>
+
+                        <div class="col">
+                            <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                                placeholder="First name">
+                        </div>
+                        <br>
+                        <div class="col">
+                            <input type="text" id="defaultRegisterFormLastName" class="form-control"
+                                placeholder="Last name">
+                        </div>
+                        <br>
+                        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
+                            placeholder="E-mail">
+                        <input type="password" id="defaultRegisterFormPassword" class="form-control"
+                            placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+                        <p>sign up with:</p>
+
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar end  -->
+
+    <div class="container-fluid" style="margin-top: 87px;">
+        <div class="row">
+            <div class="col-md-12">
+                <video autoplay muted loop src="images/Rolex/Rolex_watch.mp4" style="width: 100%;"></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="h1 text-success">The quest for
+                    excellence</div>
+            </div>
+
+            <div class="col-md-6">
+                <p style="font-size: 25px; "><b>Since its creation in 1905,
+                        Rolex has been on a quest which assembles the skills of many and requires
+                        arduous work, day after day, year after year. A demanding, rigorous and perpetual endeavour. The
+                        quest for excellence.</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="h1">The vision of Hans Wilsdorf,
+                    founder of Rolex</div>
+            </div>
+
+            <div class="col-md-6 " style="font-size: 20px;">
+                <p>To follow our founder Hans Wilsdorf’s vision, we continue to bring our assistance to the trailblazers
+                    amongst us. The men and women who, in their own time, made their mark and continue to do so in ours.
+                    The decades of experience garnered at their wrists never cease to inspire our work as watchmakers.
+                    Inside our workshops, where we conceive all our timepieces, each of them is tested at every step of
+                    manufacturing so as to adhere to our superlative standards.</p>
+                <p>It requires a great amount of time but, to us, the best can and must always be made better. Hence, we
+                    improve the waterproofness of our products by constantly defying new depths. We bolster their
+                    robustness by refining our mastery of materials and production methods. We improve their precision
+                    and autonomy by ceaselessly inventing new generations of movements.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="h1">Unique, reliable and rare</div>
+            </div>
+            <div class="col-md-6">
+                <p style="font-size: 20px;">We are lifting the veil on parts of our know-how in the hope you may grasp
+                    what makes a Rolex truly
+                    unique. Its superlative quality. Its rarity. Its unwavering reliability, in any circumstance. For
+                    each Rolex watch is the quintessential expression of what we strive to achieve, perpetually:
+                    watchmaking excellence at the service of human accomplishments.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="font-size: 25px;">Rolex Watche's</p>
+                <div class="h1" style="font-size: 70px;">All Models</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 ">
+        <div class="row ">
+            <div class="col-md-3">
+                <div class="card border rounded-3">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_1.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>Oyster, 36mm,</h2>
+                        <p>Oystersteel and white gold</p>
+                        <p>&#8377; 3999 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_2.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>Oyster, 44mm,</h2>
+                        <p>Platinum</p>
+                        <p>&#8377; 5999 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_3.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>Oyster, 41 mm,</h2>
+                        <p>Cosmograph Daytona Platinum</p>
+                        <p>&#8377; 3999 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_4.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>Oyster, 40 mm,</h2>
+                        <p> Cosmograph Daytona White Gold</p>
+                        <p>&#8377; 3999 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_5.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>Oyster, 41 mm,</h2>
+                        <p>Submariner Date Qystersteel</p>
+                        <p>&#8377; 2999 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_6.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>39 mm, 18 ct yellow gold,</h2>
+                        <p>pilished finish 1908</p>
+                        <p>&#8377; 2222 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_7.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>GMT-Master &#8545;</h2>
+                        <p> Oystersteel and yellow gold</p>
+                        <p>&#8377; 3499 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class='imgContainer'>
+                        <img src='images/Rolex/rolex_watch_8.jpg'>
+                    </div>
+                    <div class="content">
+                        <h2>Oyster Perpetual 41 Oyster</h2>
+                        <p> Oystersteel</p>
+                        <p>&#8377; 3899 </p>
+                        <div class="btn btn-dark"><a href="rolex.html">BUY</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer start -->
+
+    <div class="container-fluid mt-5 p-5 bg-dark text-white-50">
+        <div class="row justify-content-center">
+            <div class="col-md-2 mt-5">
+                <div class="h5 text-white"><u>Menu</u></div>
+                <p><a class="nav-link" href="Aboutus.html">About Us</a></p>
+                <p><a class="nav-link" href="service.html">Service</a></p>
+                <p><a class="nav-link" href="rado.html">Rado Watch</a></p>
+                <p><a class="nav-link" href="rolex.html">Rolex Watch</a></p>
+                <p><a class="nav-link" href="omega.html">Omega Watch</a></p>
+                <p><a class="nav-link" href="hublot.html">Hublot Watch</a></p>
+                <p><a class="nav-link" href="contactus.html">Contact Us</a></p>
+            </div>
+
+            <div class="col-md-2 mt-5">
+                <div class="h5 text-white"><u>Policy</u></div>
+                <p><a class="nav-link" href="Privatepolicy.html" target="_blank">Privat Policy</a></p>
+                <p><a class="nav-link" href="Terms_Condition.html" target="_blank">Terms & Condiation</a></p>
+            </div>
+            <div class="col-md-3 mt-5">
+                <div class="h5 text-white"><u>OPENING HOURS</u></div>
+                <p>Monday......9:00-22:00</p>
+                <p>Tuesday.......9:00:-22:00</p>
+                <P>Wednesday.......9:00:-22:00</P>
+                <p>Thursday......9:00:-22:00</p>
+                <p>Friday.......9:00:-22:00</p>
+                <p>Saturday......9:00:-18:00</p>
+                <p>Sunday........Holiday</p>
+            </div>
+            <div class="col-md-3 mt-5">
+                <div class="h5 text-white"><u>Location</u></div>
+                <p>Location: </p>
+                <p>New York, 94126, United States</p>
+               
+            </div>
+            <div class="col-md-2 mt-5">
+                <div class="h5 text-white"><u>CONTACT</u></div>
+                <p>Phone: 054/9923</p>
+                <p>Email: ax705363@gmail.com</p>
+                <p>On Social Media:</p>
+                <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

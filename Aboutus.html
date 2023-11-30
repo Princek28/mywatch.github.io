@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - My Watches</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <title>Our Team</title>
+    <style>
+         * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .timeline {
+            position: relative;
+            list-style: none;
+            padding: 1rem 0;
+            margin: 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            margin-left: -1px;
+            background-color: #50a1ff;
+        }
+
+        .timeline-element {
+            position: relative;
+            width: 50%;
+            padding: 1rem 0;
+            padding-right: 2.5rem;
+            text-align: right;
+        }
+
+        .timeline-element::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 1.35rem;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #50a1ff;
+            background-color: #fff;
+        }
+
+        .timeline-element:nth-child(even)::before {
+            right: auto;
+            left: -8px;
+        }
+
+        .timeline-element:nth-child(even) {
+            margin-left: 50%;
+            padding-left: 2.5rem;
+            padding-right: 0;
+            text-align: left;
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline::before {
+                left: 8px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element {
+                width: 100%;
+                text-align: left;
+                padding-left: 2.5rem;
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element::before {
+                top: 1.25rem;
+                left: 1px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element:nth-child(even) {
+                margin-left: 0rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element {
+                width: 100%;
+                text-align: left;
+                padding-left: 2.5rem;
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element:nth-child(even)::before {
+                left: 1px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element::before {
+                top: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- navbar start -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a href="" class="navbar-brand">
+            <img src="images/logo_watches.jpeg " alt="Logo" class="rounded-pill" style="height: 60px;">
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#logo">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="logo">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Service</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle"  id="dropdownMenu2" data-bs-toggle="dropdown"   style="text-decoration: none;">
+                          Watche's
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <li><a href="rado.html" class="dropdown-item" type="button">Rado</a></li>
+                          <li><a href="rolex.html" class="dropdown-item" type="button">Rolex</a></li>
+                          <li><a href="omega.html" class="dropdown-item" type="button">Omega</a></li>
+                          <li><a href="hublot.html" class="dropdown-item" type="button">Hublot</a></li>
+                        </ul>
+                      </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact US</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Login</a>
+                </li>
+
+
+            </ul>
+            <form class="d-flex" action="#">
+                <input type="text" class="form-control me-2" placeholder="Search">
+                <button class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-3">
+
+                <form class="text-center border border-light p-5" action="#!">
+
+                    <p class="h4 mb-4">Login In</p>
+
+                    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                        placeholder="Password">
+
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                    me</label>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-info btn-block my-4" type="submit">Submit</button>
+
+                    <p>Not a member?
+                        <a href="#" data-bs-target="#mymodall" data-bs-toggle="modal">Register</a>
+                    </p>
+
+                    <p>or sign in with:</p>
+
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mymodall">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-close text-end" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-3">
+                <form class="text-center border border-light p-5" action="#!">
+
+                    <p class="h4 mb-4">Sign up</p>
+
+                    <div class="col">
+                        <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                            placeholder="First name">
+                    </div>
+                    <br>
+                    <div class="col">
+                        <input type="text" id="defaultRegisterFormLastName" class="form-control"
+                            placeholder="Last name">
+                    </div>
+                    <br>
+                    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
+                        placeholder="E-mail">
+                    <input type="password" id="defaultRegisterFormPassword" class="form-control"
+                        placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+                    <p>sign up with:</p>
+
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- navbar end  -->
+
+    <div class="container z-depth-1 my-5 py-5 px-4 px-lg-0">
+
+        <!-- Section -->
+        <section>
+            <h3 class="font-weight-bold text-center dark-grey-text pb-2">Our History</h3>
+            <hr class="w-header my-4">
+            <p class="lead text-center text-muted pt-2 mb-5">My Watches was founded in the heart of horological passion,
+                where craftsmanship and innovation converged.</p>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+
+                    <ol class="timeline">
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">My Watches - Timepieces with a Tale</h5>
+                            <p class="grey-text font-small"><time datetime="2017-02-08">08 Feb 2017</time></p>
+                            <p class="text-muted">My Watches - Timepieces with a Tale" is a captivating journey through
+                                the artistry and craftsmanship of our exquisite watch collections. Every tick of our
+                                timepieces resonates with a rich narrative, blending heritage and innovation seamlessly.
+                            </p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">My Watches: A Journey Through Precision and
+                                Style</h5>
+                            <p class="grey-text font-small"><time datetime="2017-08-17">17 Aug 2020</time></p>
+                            <p><img class="img-fluid z-depth-1-half rounded"
+                                    src="images/photo-1604242692760-2f7b0c26856d.avif" alt="..."></p>
+                            <p class="text-muted">A Journey Through Precision and Style" invites you to embark on a
+                                voyage where meticulous craftsmanship meets contemporary design. Our timepieces are more
+                                than just accessories; they are a testament to unparalleled precision and enduring
+                                style.</p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">About My Watches: Where Passion for Time
+                                Comes Alive</h5>
+                            <p class="grey-text font-small"><time datetime="2018-03-26">26 Mar 2021</time></p>
+                            <p class="text-muted">Where Passion for Time Comes Alive" embodies our fervent dedication to
+                                the art of watchmaking. Here, time is not just measured; it's cherished, revered, and
+                                brought to life with an unmatched passion. Our watches are born from a deep love for
+                                precision, elegance, and the timeless beauty of horology.</p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">My Watches - Your Gateway to Timeless
+                                Luxury</h5>
+                            <p class="grey-text font-small"><time datetime="2018-04-14">14 Apr 2021</time></p>
+                            <p class="text-muted">My Watches - Your Gateway to Timeless Luxury" opens the door to a
+                                realm where sophistication meets substance. We curate more than just watches; we craft
+                                moments of indulgence and elegance.</p>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- Section -->
+
+
+
+
+    <!-- TEAM MEMBER  -->
+    <div class="container pt-5 my-5 z-depth-1">
+        <section class="p-md-3 mx-md-5 text-lg-left">
+            <h1 class="text-center font-weight-bold mb-4 pb-1">Our Team</h1>
+            <div class="row justify-content-center text-center">
+                <div class="col-md-4 mt-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-5 avatar w-100 white d-flex justify-content-center align-items-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                                class="img-fluid rounded-circle z-depth-1" />
+                        </div>
+                        <div>
+                            <h6 class="font-weight-bold pt-2">Alex Carter</h6>
+                            <p> Chief Executive Officer (CEO)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-5 avatar w-100 white d-flex justify-content-center align-items-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
+                                class="img-fluid rounded-circle z-depth-1" />
+                        </div>
+                        <div>
+                            <h6 class="font-weight-bold pt-2">Emily Patel</h6>
+                            <p>Chief Marketing Officer (CMO)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-5 avatar w-100 white d-flex justify-content-center align-items-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
+                                class="img-fluid rounded-circle z-depth-1" />
+                        </div>
+                        <div>
+                            <h6 class="font-weight-bold pt-2">Daniel Kim</h6>
+                            <p>Chief Technology Officer (CTO)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-5 avatar w-100 white d-flex justify-content-center align-items-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(2).jpg"
+                                class="img-fluid rounded-circle z-depth-1" />
+                        </div>
+                        <div>
+                            <h6 class="font-weight-bold pt-2">Jessica Lopez</h6>
+                            <p>Head of Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-5 avatar w-100 white d-flex justify-content-center align-items-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(7).jpg"
+                                class="img-fluid rounded-circle z-depth-1" />
+                        </div>
+                        <div>
+                            <h6 class="font-weight-bold pt-2">Ryan Turner</h6>
+                            <p>Senior Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-5 avatar w-100 white d-flex justify-content-center align-items-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg"
+                                class="img-fluid rounded-circle z-depth-1" />
+                        </div>
+                        <div class="">
+                            <h6 class="font-weight-bold pt-2">Olivia Smith</h6>
+                            <p class="">
+                                Social Media Manager
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- Footer start -->
+
+<div class="container-fluid mt-5 p-5 bg-dark text-white-50">
+    <div class="row justify-content-center">
+        <div class="col-md-2 mt-5">
+            <div class="h5 text-white"><u>Menu</u></div>
+            <p><a class="nav-link" href="Aboutus.html">About Us</a></p>
+            <p><a class="nav-link" href="service.html">Service</a></p>
+            <p><a class="nav-link" href="rado.html">Rado Watch</a></p>
+            <p><a class="nav-link" href="rolex.html">Rolex Watch</a></p>
+            <p><a class="nav-link" href="omega.html">Omega Watch</a></p>
+            <p><a class="nav-link" href="hublot.html">Hublot Watch</a></p>
+            <p><a class="nav-link" href="contactus.html">Contact Us</a></p>
+        </div>
+
+        <div class="col-md-2 mt-5">
+            <div class="h5 text-white"><u>Policy</u></div>
+            <p><a class="nav-link" href="Privatepolicy.html" target="_blank">Privat Policy</a></p>
+            <p><a class="nav-link" href="Terms_Condition.html" target="_blank">Terms & Condiation</a></p>
+        </div>
+        <div class="col-md-3 mt-5">
+            <div class="h5 text-white"><u>OPENING HOURS</u></div>
+            <p>Monday......9:00-22:00</p>
+            <p>Tuesday.......9:00:-22:00</p>
+            <P>Wednesday.......9:00:-22:00</P>
+            <p>Thursday......9:00:-22:00</p>
+            <p>Friday.......9:00:-22:00</p>
+            <p>Saturday......9:00:-18:00</p>
+            <p>Sunday........Holiday</p>
+        </div>
+        <div class="col-md-3 mt-5">
+            <div class="h5 text-white"><u>Location</u></div>
+            <p>Location: </p>
+            <p>New York, 94126, United States</p>
+        </div>
+        <div class="col-md-2 mt-5">
+            <div class="h5 text-white"><u>CONTACT</u></div>
+            <p>Phone: 054/9923</p>
+            <p>Email: ax705363@gmail.com</p>
+            <p>On Social Media:</p>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i style="font-size: 35px; padding: 2px;" class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
